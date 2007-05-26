@@ -1,0 +1,2 @@
+luaL_Buffer usage in posix/spawn.c and w32api/spawn.c is broken.
+w32api/spawn.c spawn_param_args should properly quote arguments according to CommandLineToArgv(quote)
