@@ -1,7 +1,7 @@
 /*
  * "ex" API implementation
  * http://lua-users.org/wiki/ExtensionProposal
- * Copyright 2007 Mark Edgar < medgar at student gc maricopa edu >
+ * Copyright 2007 Mark Edgar < medgar123 at gmail com >
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,11 +10,12 @@
 #include <string.h>
 
 #include <unistd.h>
-ENVIRON_DECL
 #include <dirent.h>
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <limits.h>
+
+#include "environ.h"
 
 #include "lua.h"
 #include "lualib.h"

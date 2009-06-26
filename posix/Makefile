@@ -1,7 +1,7 @@
 include ../conf
 
 CFLAGS= $(WARNINGS) $(DEFINES) $(INCLUDES)
-DEFINES= -D_XOPEN_SOURCE=600 $(POSIX_SPAWN) $(ENVIRON)
+DEFINES= -D_XOPEN_SOURCE=600 $(POSIX_SPAWN)
 INCLUDES= $(LUAINC)
 WARNINGS= -W -Wall
 LIBS= $(LUALIB)
@@ -10,7 +10,7 @@ T= ex.so
 default: $(T)
 
 OBJS= ex.o spawn.o $(EXTRA)
-$(T): $(OBJS) $(EXTRA); $(CC) -shared -o $@ $(OBJS) $(LIBS)
+$(T): $(OBJS) $(EXTRA); $(CC) -shared -o $@ $(OBJS) $(LIBS) -lc
 ex.o: ex.c spawn.h
 spawn.o: spawn.c spawn.h
 posix_spawn.o: posix_spawn.c posix_spawn.h
