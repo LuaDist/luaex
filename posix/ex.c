@@ -483,9 +483,9 @@ int luaopen_ex(lua_State *L)
   if (lua_isnil(L, -1)) return luaL_error(L, "io not loaded");
   copyfields(L, ex_iolib, ex, -1);
   lua_getfield(L, ex, "pipe");                /* . io ex_pipe */
-  lua_getfield(L, -2, "stderr");              /* . io ex_pipe io_stderr */
-  lua_getfenv(L, -1);                         /* . io ex_pipe io_stderr E */
-  lua_setfenv(L, -3);                         /* . io ex_pipe io_stderr */
+  lua_getfield(L, -2, "open");                /* . io ex_pipe io_open */
+  lua_getfenv(L, -1);                         /* . io ex_pipe io_open E */
+  lua_setfenv(L, -3);                         /* . io ex_pipe io_open */
   /* extend the io.file metatable */
   luaL_getmetatable(L, LUA_FILEHANDLE);       /* . F */
   if (lua_isnil(L, -1)) return luaL_error(L, "can't find FILE* metatable");

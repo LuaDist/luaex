@@ -10,7 +10,7 @@ T= ex.so
 default: $(T)
 
 OBJS= ex.o spawn.o $(EXTRA)
-$(T): $(OBJS) $(EXTRA); $(CC) -shared -o $@ $(OBJS) $(LIBS) -lc
+$(T): $(OBJS) $(EXTRA); $(CC) -shared -o $@ $(OBJS) $(LIBS)
 ex.o: ex.c spawn.h
 spawn.o: spawn.c spawn.h
 posix_spawn.o: posix_spawn.c posix_spawn.h
