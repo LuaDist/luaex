@@ -19,7 +19,7 @@ static char *mkpattern(const char *name)
   size_t len = strlen(name);
   char *pattern = malloc(len + sizeof suffix);
   if (pattern)
-    strcpy(memcpy(pattern, name, len) + len, suffix);
+    strcpy((char*)memcpy(pattern, name, len) + len, suffix);
   return pattern;
 }
 
