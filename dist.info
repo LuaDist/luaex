@@ -5,7 +5,7 @@ version = "20091019" --~2DO: should reference tarball
 
 url = "http://lua-users.org/wiki/ExtensionProposal"
 author = "Mark Edgar"
-desc = "Implemenation of 'ex' API - portable os and io extension functions"
+desc = "Implementation of 'ex' API - portable os and io extension functions"
 license = "MIT"
 maintainer = "Peter Drahoš"
 
