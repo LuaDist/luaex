@@ -34,3 +34,5 @@ endif ()
 install_lua_module ( ex ${SRC} )
 
 install_data ( COPYRIGHT Changelog JUST TODO README )
+
+add_lua_test ( test.lua )
